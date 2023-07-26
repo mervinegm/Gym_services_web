@@ -30,14 +30,35 @@ function contactContainer(el) {
                 </button>
             </div>
         </form>
+
+        <div class="sent-window">
+        <div class="sent-window-container">
+            <div class="sent-window__button-container">
+                <button class="sent-window__button">
+                    <img class="sent-window__button-img" src="" alt="close">
+                </button>
+            </div>
+            <div class="sent-window__options-container">
+                <p class="sent-window__options">¡Tu mensaje ha sido enviado con éxito!</p>
+            </div>
+        </div>
+    </div>
     </div>
         `;
+
+  const nameEl = componentEl.querySelector("#name");
 
   const emailEL = componentEl.querySelector("#email");
 
   const mensajeEl = componentEl.querySelector("#mensaje");
 
   const formEl = componentEl.querySelector(".contact__form");
+
+  const sentWindowEl = componentEl.querySelector(".sent-window");
+
+  const closeSentWindowButtonEl = componentEl.querySelector(
+    ".sent-window__button"
+  );
 
   formEl.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -50,6 +71,30 @@ function contactContainer(el) {
         to: `${emailEL}`,
         message: `${mensajeEl}`,
       }),
+    });
+
+    nameEl.value = "";
+    emailEL.value = "";
+    mensajeEl.value = "";
+
+    fetch(
+      "https://cdn.contentful.com/spaces/8r00ukyh4hkq/environments/master/entries?access_token=NIjEBRySV05-TekofMQbtnzr3pMwxmgVWomAnY-JsRU&content_type=m4header"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+
+        const urlCloseSentButton = data.includes.Asset[1].fields.file.url;
+        const imgCloseSentButtonEl = document.querySelector(
+          ".sent-window__button-img"
+        );
+        imgCloseSentButtonEl.src = "https:/" + urlCloseSentButton;
+      });
+
+    sentWindowEl.style.display = "inherit";
+
+    closeSentWindowButtonEl.addEventListener("click", function (e) {
+      sentWindowEl.style.display = "";
     });
   });
 

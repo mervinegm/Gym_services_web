@@ -152,3 +152,42 @@
     width: 26px;
     height: 26px;
 }
+
+/*-------------- Window Section --------------*/
+
+.sent-window{    
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    height: 100vh;
+    position:fixed;
+}
+
+.sent-window-container{
+    display: block;
+    width: 100%;
+}
+
+.sent-window__button-container{
+    text-align: end;
+}
+
+.sent-window__button{
+    background-color: #000000;
+    border: none;
+}
+
+.sent-window__options-container{
+    text-align: center;
+}
+
+.sent-window__options{
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 42px;
+    color: #EEEEEE;
+}
