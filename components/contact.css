@@ -45,7 +45,7 @@
 }
 
 .contact__form{
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     padding: 0 40px;
