@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------- Welcome Section --------------*/
+
+.welcome{
+    height: 700px;
+    width: 100%;
+    background-color: #13171C;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media(min-width: 960px){
+    .welcome{
+        height: 500px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+.welcome-title{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 60px;
+    font-weight: 700;
+    color: #EEEEEE;
+    padding-top: 50px;
+    text-align: center;
+}
+
+@media(min-width:960px){
+    .welcome-title{
+        padding-top: 0;
+        font-size: 70px;
+    }
+}
+
+.wt2{
+    color: #00ADB5;
+    padding-top: 0;
+}
+
+.welcome-img{
+    width: 500px;
+    height: 300px;
+    padding-top: 50px;
+    border-radius: 20px;
+}
+
+@media(min-width:960px){
+    .welcome-img{
+       padding-top: 0; 
+    } 
+}
+
+/*-------------- Services Section --------------*/
+
+.services{
+    background-color:#13171C;
+    background-image: url("https:////images.ctfassets.net/8r00ukyh4hkq/1bYR3XtZydn9ImO8uxXJdw/09d87857c68831e704b24a7b2c061e32/doodle_items.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+}
+
+.services-title{
+    margin: 0;
+    font-family: "Poppins";
+    font-size: 42px;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding-bottom: 40px;
+}
+
+@media(min-width:960px){
+    .services-title{
+        font-size: 64px;
+    }
+}
+
+.services-title__2{
+    color: #00ADB5;
+}
+
+.service-card-container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width:960px){
+    .service-card-container{
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+.service-card{
+    width: 100%;
+    background: #393E4680;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+@media(min-width:960px){
+    .service-card{
+        margin-bottom: 0;
+        width: 350px;
+        margin-bottom: 20px;
+    }
+}
+
+.card-img{
+    height: 270px;
+    width: 400px;
+    border: solid 5px #13171C;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: #FFFFFF;
+}
+
+@media(min-width:960px){
+    .card-img{
+        width:calc(100% - 100px);
+        height:160px;
+    }
+}
+
+.card-title{
+    margin: 0;
+    font-family: "Poppins";
+    font-size: 33px;
+    font-weight: 700;
+    text-align: center;
+    color: #EEEEEE;
+    padding: 20px 0;
+}
+
+.card-description{
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    color: #EEEEEE;
+    margin: 0;
+    padding: 0 50px 50px 50px;
+    text-align: justify;
+}
