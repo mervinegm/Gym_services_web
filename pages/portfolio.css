@@ -10,7 +10,7 @@ body{
 /*-------------- Welcome Section --------------*/
 
 .welcome{
-    height: 800px;
+    height: 580px;
     width: 100%;
     background-color: #13171C;
     display: flex;
@@ -53,13 +53,15 @@ body{
 
 .welcome-img{
     width: 320px;
-    height: 320px;
+    height: 280px;
     padding-top: 50px;
+    border-radius: 20px;
 }
 
 @media(min-width:960px){
     .welcome-img{
        padding-top: 0; 
+       width: 420px;
     } 
 }
 
